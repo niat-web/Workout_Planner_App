@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="manifest" href="manifest.json">  <!-- For PWA functionality -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container text-center">
+            <h1>Workout Planner</h1>
+            <p>Your Personalized Fitness Journey Starts Here</p>
+            <button id="darkModeToggle" class="btn btn-sm"><i class="fas fa-moon"></i> Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="personalization" class="mb-4">
+            <h2>Personalized Workout Plan</h2>
+            <form id="workoutForm">
+                <div class="form-group">
+                    <label for="goal">Fitness Goal:</label>
+                    <select class="form-control" id="goal" name="goal">
+                        <option value="strength">Strength Training</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="flexibility">Flexibility</option>
+                        <option value="weightloss">Weight Loss</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Experience Level:</label>
+                    <select class="form-control" id="experience" name="experience">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="days">Days per Week:</label>
+                    <input type="number" class="form-control" id="days" name="days" min="1" max="7" value="3">
+                </div>
+                <button type="submit" class="btn btn-primary">Generate Plan</button>
+            </form>
+            <div id="workoutPlanOutput"></div>
+        </section>
+
+        <section id="tracking" class="mb-4">
+            <h2>Workout Tracker</h2>
+            <form id="exerciseLogForm">
+                <div class="form-group">
+                    <label for="exerciseName">Exercise Name:</label>
+                    <input type="text" class="form-control" id="exerciseName" name="exerciseName" required>
+                </div>
+                <div class="form-group">
+                    <label for="sets">Sets:</label>
+                    <input type="number" class="form-control" id="sets" name="sets" min="1" value="3" required>
+                </div>
+                <div class="form-group">
+                    <label for="reps">Reps:</label>
+                    <input type="number" class="form-control" id="reps" name="reps" min="1" value="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="number" class="form-control" id="weight" name="weight" min="0" value="0">
+                </div>
+                <button type="submit" class="btn btn-success">Log Exercise</button>
+            </form>
+            <div id="workoutLogOutput"></div>
+            <!-- Exercise Log History Table -->
+        </section>
+
+        <section id="stats" class="mb-4">
+            <h2>Workout Stats</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Workouts Completed</h5>
+                    <p class="card-text" id="totalWorkouts">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="motivation">
+            <h2>Motivational Quote</h2>
+            <p id="quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
+        </section>
+
+        <div id="notificationArea"></div> <!-- Notifications will appear here -->
+
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Workout Planner App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
