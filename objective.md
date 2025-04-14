@@ -5,7 +5,7 @@
 The Workout Planner App is a web application designed to help users generate personalized workout plans based on their goals, experience level, and available days per week. It also allows users to log their exercises, track their progress, and provides a dark mode feature for enhanced user experience. The app leverages JavaScript for DOM manipulation, event handling, local storage for persistent data, and basic input validation. This documentation provides a comprehensive overview of the application's functionality, technical aspects, and implementation details.
 
 ## Output
-<iframe src="https://niat-web.github.io/Workout_Planner_App" height="1000" width="300" title="Workout_Planner_App"></iframe>
+<iframe src="https://niat-web.github.io/Workout_Planner_App/" height="1000" width="300" title="Workout_Planner_App"></iframe>
 
 ## Project Requirements
 **Technologies:** HTML, CSS, JavaScript, Local Storage
